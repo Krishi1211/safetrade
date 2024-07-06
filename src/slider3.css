@@ -1,0 +1,884 @@
+@charset "UTF-8";
+
+#slider3 {
+  font-family: "Montserrat";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: #fef7ce;
+}
+#slider3 * {
+  box-sizing: border-box;
+}
+#slider3 .btn {
+  position: absolute;
+  z-index: 8;
+  width: 30px;
+  height: 30px;
+  left: calc(50% - 15px);
+  top: calc(50% - 15px);
+  margin-top: 250px;
+  transition: 0.2s ease-in-out;
+  margin-left: 350px;
+}
+#slider3 input[type=radio] {
+  position: absolute;
+  z-index: 8;
+  width: 80px;
+  height: 80px;
+  left: calc(50% - 40px);
+  top: calc(50% - 40px);
+  margin-top: 250px;
+  margin-left: 350px;
+}
+#slider3 input[type=radio]:hover ~ .btn {
+  box-shadow: 0 0 0 1px #000;
+}
+#slider3 input[type=radio]:hover ~ .btn:before {
+  border-top: 5px solid #000;
+  border-right: 5px solid #000;
+}
+#slider3 .btn {
+  box-shadow: 0 0 0 1px #fff;
+  z-index: 999;
+  pointer-events: none;
+  border-radius: 100%;
+}
+#slider3 .btn:before {
+  content: "";
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  border-top: 5px solid #fff;
+  border-right: 5px solid #fff;
+  left: 50%;
+  top: 50%;
+  transform: translateY(calc(-50% - 2.5px)) translateX(-50%) rotate(135deg);
+  transition: 0.2s ease-in-out;
+}
+#slider3 input {
+  opacity: 0;
+  z-index: 999;
+}
+#slider3 input:first-of-type:checked ~ #wrap:before {
+  transition: 0s;
+}
+#slider3 input:first-of-type:checked ~ #wrap:after {
+  transition: 0s;
+}
+#slider3 input:first-of-type:checked ~ #wrap .slide:nth-of-type(2) {
+  opacity: 0;
+}
+#slider3 input:first-of-type:checked ~ #wrap .slide:nth-of-type(3):before, #slider3 input:first-of-type:checked ~ #wrap .slide:nth-of-type(3) .label:before {
+  transform-origin: top;
+}
+#slider3 input:last-of-type:checked {
+  z-index: 0;
+}
+#slider3 input:last-of-type:checked ~ .btn:before {
+  transform: translateY(calc(-50% + 1.5px)) translateX(-50%) rotate(135deg) scaleX(-1) scaleY(-1);
+}
+#slider3 input:last-of-type:checked ~ #wrap .slide:nth-of-type(1):before, #slider3 input:last-of-type:checked ~ #wrap .slide:nth-of-type(1) .label:before {
+  transform: translateY(0);
+}
+#slider3 input:last-of-type:checked ~ #wrap .slide:nth-of-type(1) .image {
+  transform: translateX(-50%) translateY(calc(-50% + 100vh));
+}
+#slider3 input:nth-of-type(1) {
+  z-index: 9;
+}
+#slider3 input:nth-of-type(1):checked {
+  pointer-events: none;
+  opacity: 0;
+}
+#slider3 input:nth-of-type(1):checked + input {
+  z-index: 20;
+}
+#slider3 input:nth-of-type(1):checked ~ #wrap .outer .box:before {
+  transform: translateY(0%);
+}
+#slider3 input:nth-of-type(1):checked ~ #wrap:before {
+  transform: translateX(0%);
+}
+#slider3 input:nth-of-type(1):checked ~ #wrap:after {
+  transform: translateY(0%);
+}
+#slider3 input:nth-of-type(1):checked ~ #wrap .slide:nth-of-type(1) .content {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  transition-delay: 0.3s;
+}
+#slider3 input:nth-of-type(1):checked ~ #wrap .slide:nth-of-type(1) .content p:before {
+  transform: translateY(0);
+  transition-delay: 0.45s;
+  opacity: 1;
+}
+#slider3 input:nth-of-type(1):checked ~ #wrap .slide:nth-of-type(1) p.classifications {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  transition-delay: 0.2s;
+}
+#slider3 input:nth-of-type(1):checked ~ #wrap .slide:nth-of-type(1) .image {
+  transition: all 600ms cubic-bezier(1, 0.885, 0.72, 1);
+  transition-delay: 0.1s;
+  transform: translateX(-50%) translateY(-50%);
+}
+#slider3 input:nth-of-type(1):checked ~ #wrap .slide:nth-of-type(1) .label:before {
+  transform: translateY(0);
+}
+#slider3 input:nth-of-type(1):checked ~ #wrap .slide:nth-of-type(1):before {
+  transform: translateY(0);
+}
+#slider3 input:nth-of-type(1):checked ~ #wrap .slide:nth-of-type(2) .content {
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+}
+#slider3 input:nth-of-type(1):checked ~ #wrap .slide:nth-of-type(2) p.classifications {
+  -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+          clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+#slider3 input:nth-of-type(1):checked ~ #wrap .slide:nth-of-type(2) .image {
+  transform: translateX(-50%) translateY(calc(-50% + 100vh));
+}
+#slider3 input:nth-of-type(1):checked ~ #wrap .slide:nth-of-type(0) .image {
+  transition: 0.3s ease-in-out;
+}
+#slider3 input:nth-of-type(1):checked ~ #wrap .slide:nth-of-type(0) .label:before {
+  transform: translateY(0);
+}
+#slider3 input:nth-of-type(1):checked ~ #wrap .slide:nth-of-type(0):before {
+  transform: translateY(0);
+}
+#slider3 input:first-of-type:checked ~ #wrap:before {
+  transition: 0s;
+}
+#slider3 input:first-of-type:checked ~ #wrap:after {
+  transition: 0s;
+}
+#slider3 input:first-of-type:checked ~ #wrap .slide:nth-of-type(2) {
+  opacity: 0;
+}
+#slider3 input:first-of-type:checked ~ #wrap .slide:nth-of-type(3):before, #slider3 input:first-of-type:checked ~ #wrap .slide:nth-of-type(3) .label:before {
+  transform-origin: top;
+}
+#slider3 input:last-of-type:checked {
+  z-index: 0;
+}
+#slider3 input:last-of-type:checked ~ .btn:before {
+  transform: translateY(calc(-50% + 1.5px)) translateX(-50%) rotate(135deg) scaleX(-1) scaleY(-1);
+}
+#slider3 input:last-of-type:checked ~ #wrap .slide:nth-of-type(1):before, #slider3 input:last-of-type:checked ~ #wrap .slide:nth-of-type(1) .label:before {
+  transform: translateY(0);
+}
+#slider3 input:last-of-type:checked ~ #wrap .slide:nth-of-type(1) .image {
+  transform: translateX(-50%) translateY(calc(-50% + 100vh));
+}
+#slider3 input:nth-of-type(2) {
+  z-index: 8;
+}
+#slider3 input:nth-of-type(2):checked {
+  pointer-events: none;
+  opacity: 0;
+}
+#slider3 input:nth-of-type(2):checked + input {
+  z-index: 20;
+}
+#slider3 input:nth-of-type(2):checked ~ #wrap .outer .box:before {
+  transform: translateY(25%);
+}
+#slider3 input:nth-of-type(2):checked ~ #wrap:before {
+  transform: translateX(-25%);
+}
+#slider3 input:nth-of-type(2):checked ~ #wrap:after {
+  transform: translateY(25%);
+}
+#slider3 input:nth-of-type(2):checked ~ #wrap .slide:nth-of-type(2) .content {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  transition-delay: 0.3s;
+}
+#slider3 input:nth-of-type(2):checked ~ #wrap .slide:nth-of-type(2) .content p:before {
+  transform: translateY(0);
+  transition-delay: 0.45s;
+  opacity: 1;
+}
+#slider3 input:nth-of-type(2):checked ~ #wrap .slide:nth-of-type(2) p.classifications {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  transition-delay: 0.2s;
+}
+#slider3 input:nth-of-type(2):checked ~ #wrap .slide:nth-of-type(2) .image {
+  transition: all 600ms cubic-bezier(1, 0.885, 0.72, 1);
+  transition-delay: 0.1s;
+  transform: translateX(-50%) translateY(-50%);
+}
+#slider3 input:nth-of-type(2):checked ~ #wrap .slide:nth-of-type(2) .label:before {
+  transform: translateY(0);
+}
+#slider3 input:nth-of-type(2):checked ~ #wrap .slide:nth-of-type(2):before {
+  transform: translateY(0);
+}
+#slider3 input:nth-of-type(2):checked ~ #wrap .slide:nth-of-type(3) .content {
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+}
+#slider3 input:nth-of-type(2):checked ~ #wrap .slide:nth-of-type(3) p.classifications {
+  -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+          clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+#slider3 input:nth-of-type(2):checked ~ #wrap .slide:nth-of-type(3) .image {
+  transform: translateX(-50%) translateY(calc(-50% + 100vh));
+}
+#slider3 input:nth-of-type(2):checked ~ #wrap .slide:nth-of-type(1) .image {
+  transition: 0.3s ease-in-out;
+}
+#slider3 input:nth-of-type(2):checked ~ #wrap .slide:nth-of-type(1) .label:before {
+  transform: translateY(0);
+}
+#slider3 input:nth-of-type(2):checked ~ #wrap .slide:nth-of-type(1):before {
+  transform: translateY(0);
+}
+#slider3 input:first-of-type:checked ~ #wrap:before {
+  transition: 0s;
+}
+#slider3 input:first-of-type:checked ~ #wrap:after {
+  transition: 0s;
+}
+#slider3 input:first-of-type:checked ~ #wrap .slide:nth-of-type(2) {
+  opacity: 0;
+}
+#slider3 input:first-of-type:checked ~ #wrap .slide:nth-of-type(3):before, #slider3 input:first-of-type:checked ~ #wrap .slide:nth-of-type(3) .label:before {
+  transform-origin: top;
+}
+#slider3 input:last-of-type:checked {
+  z-index: 0;
+}
+#slider3 input:last-of-type:checked ~ .btn:before {
+  transform: translateY(calc(-50% + 1.5px)) translateX(-50%) rotate(135deg) scaleX(-1) scaleY(-1);
+}
+#slider3 input:last-of-type:checked ~ #wrap .slide:nth-of-type(1):before, #slider3 input:last-of-type:checked ~ #wrap .slide:nth-of-type(1) .label:before {
+  transform: translateY(0);
+}
+#slider3 input:last-of-type:checked ~ #wrap .slide:nth-of-type(1) .image {
+  transform: translateX(-50%) translateY(calc(-50% + 100vh));
+}
+#slider3 input:nth-of-type(3) {
+  z-index: 7;
+}
+#slider3 input:nth-of-type(3):checked {
+  pointer-events: none;
+  opacity: 0;
+}
+#slider3 input:nth-of-type(3):checked + input {
+  z-index: 20;
+}
+#slider3 input:nth-of-type(3):checked ~ #wrap .outer .box:before {
+  transform: translateY(50%);
+}
+#slider3 input:nth-of-type(3):checked ~ #wrap:before {
+  transform: translateX(-50%);
+}
+#slider3 input:nth-of-type(3):checked ~ #wrap:after {
+  transform: translateY(50%);
+}
+#slider3 input:nth-of-type(3):checked ~ #wrap .slide:nth-of-type(3) .content {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  transition-delay: 0.3s;
+}
+#slider3 input:nth-of-type(3):checked ~ #wrap .slide:nth-of-type(3) .content p:before {
+  transform: translateY(0);
+  transition-delay: 0.45s;
+  opacity: 1;
+}
+#slider3 input:nth-of-type(3):checked ~ #wrap .slide:nth-of-type(3) p.classifications {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  transition-delay: 0.2s;
+}
+#slider3 input:nth-of-type(3):checked ~ #wrap .slide:nth-of-type(3) .image {
+  transition: all 600ms cubic-bezier(1, 0.885, 0.72, 1);
+  transition-delay: 0.1s;
+  transform: translateX(-50%) translateY(-50%);
+}
+#slider3 input:nth-of-type(3):checked ~ #wrap .slide:nth-of-type(3) .label:before {
+  transform: translateY(0);
+}
+#slider3 input:nth-of-type(3):checked ~ #wrap .slide:nth-of-type(3):before {
+  transform: translateY(0);
+}
+#slider3 input:nth-of-type(3):checked ~ #wrap .slide:nth-of-type(4) .content {
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+}
+#slider3 input:nth-of-type(3):checked ~ #wrap .slide:nth-of-type(4) p.classifications {
+  -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+          clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+#slider3 input:nth-of-type(3):checked ~ #wrap .slide:nth-of-type(4) .image {
+  transform: translateX(-50%) translateY(calc(-50% + 100vh));
+}
+#slider3 input:nth-of-type(3):checked ~ #wrap .slide:nth-of-type(2) .image {
+  transition: 0.3s ease-in-out;
+}
+#slider3 input:nth-of-type(3):checked ~ #wrap .slide:nth-of-type(2) .label:before {
+  transform: translateY(0);
+}
+#slider3 input:nth-of-type(3):checked ~ #wrap .slide:nth-of-type(2):before {
+  transform: translateY(0);
+}
+#slider3 #wrap {
+  min-width: 800px;
+  min-height: 600px;
+  position: relative;
+  background: #fff;
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.45);
+}
+#slider3 #wrap .jar {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 25%;
+  overflow: hidden;
+  z-index: 8;
+}
+#slider3 #wrap .jar:before, #slider3 #wrap .jar:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/383755/jar.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.3s ease-in-out;
+  transform: translateY(100%) scaleX(0.75);
+}
+#slider3 #wrap .jar:after {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/383755/lid.png");
+  background-size: 260px;
+  top: -190px;
+  transform: translateY(-100%) scaleX(0.75);
+}
+#slider3 #wrap .cart, #slider3 #wrap .cart .inner {
+  z-index: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+#slider3 #wrap .cart .inner, #slider3 #wrap .cart .inner .inner {
+  background: #fff;
+  transform: translateX(100%);
+  transition: 0.3s cubic-bezier(1, 0.885, 0.72, 1);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 60px 40px 150px;
+}
+#slider3 #wrap .cart .inner .buy, #slider3 #wrap .cart .inner .inner .buy {
+  position: absolute;
+  bottom: 90px;
+  right: 40px;
+  transition: 0.3s ease-in-out;
+  transform: scale(0);
+}
+#slider3 #wrap .cart .inner .buy:before, #slider3 #wrap .cart .inner .inner .buy:before {
+  content: "CHECK OUT";
+  font-size: 14px;
+  box-shadow: 0 0 0 1px;
+  padding: 10px 15px;
+  border-radius: 50px;
+}
+#slider3 #wrap .cart .inner .bug, #slider3 #wrap .cart .inner .inner .bug {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 15% 40% 15% 15% 15%;
+  grid-template-rows: 100%;
+  border-bottom: 1px solid #ccc;
+  -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+          clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+#slider3 #wrap .cart .inner .bug .image, #slider3 #wrap .cart .inner .inner .bug .image {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  transform: rotate(90deg) scale(0.75);
+  background-image: url("https://puu.sh/DFAVr/627c7ece9f.png");
+}
+#slider3 #wrap .cart .inner .bug:nth-of-type(2) .image, #slider3 #wrap .cart .inner .inner .bug:nth-of-type(2) .image {
+  background-image: url("https://puu.sh/DFAVP/579e5c4793.png");
+}
+#slider3 #wrap .cart .inner .bug:nth-of-type(2) span:first-of-type:before, #slider3 #wrap .cart .inner .inner .bug:nth-of-type(2) span:first-of-type:before {
+  content: "Superious Grossius";
+}
+#slider3 #wrap .cart .inner .bug:nth-of-type(2) span:nth-of-type(3):after, #slider3 #wrap .cart .inner .inner .bug:nth-of-type(2) span:nth-of-type(3):after {
+  content: "9.50";
+}
+#slider3 #wrap .cart .inner .bug:nth-of-type(3) .image, #slider3 #wrap .cart .inner .inner .bug:nth-of-type(3) .image {
+  background-image: url("https://puu.sh/DFAK1/62a2c6fbf7.png");
+}
+#slider3 #wrap .cart .inner .bug:nth-of-type(3) span:first-of-type:before, #slider3 #wrap .cart .inner .inner .bug:nth-of-type(3) span:first-of-type:before {
+  content: "Slimius Maximus";
+}
+#slider3 #wrap .cart .inner .bug:nth-of-type(3) span:nth-of-type(3):after, #slider3 #wrap .cart .inner .inner .bug:nth-of-type(3) span:nth-of-type(3):after {
+  content: "8.50";
+}
+#slider3 #wrap .cart .inner .bug .image, #slider3 #wrap .cart .inner .inner .bug .image {
+  grid-column: 1/span 1;
+}
+#slider3 #wrap .cart .inner .bug span, #slider3 #wrap .cart .inner .inner .bug span {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 20px;
+}
+#slider3 #wrap .cart .inner .bug span:first-of-type:before, #slider3 #wrap .cart .inner .inner .bug span:first-of-type:before {
+  content: "Digustingus Crawlerus";
+  text-align: center;
+}
+#slider3 #wrap .cart .inner .bug span:last-of-type, #slider3 #wrap .cart .inner .inner .bug span:last-of-type {
+  opacity: 0.35;
+  transform: scaleY(0.85);
+  font-size: 20px;
+}
+#slider3 #wrap .cart .inner .bug span:nth-of-type(2) b, #slider3 #wrap .cart .inner .inner .bug span:nth-of-type(2) b {
+  display: inline-block;
+  padding: 10px 15px;
+  box-shadow: 0 0 0 1px #ccc;
+  position: relative;
+}
+#slider3 #wrap .cart .inner .bug span:nth-of-type(2) b:before, #slider3 #wrap .cart .inner .inner .bug span:nth-of-type(2) b:before {
+  content: "-";
+  position: absolute;
+  left: -20px;
+  color: #aaa;
+  font-weight: 300;
+  font-size: 26px;
+}
+#slider3 #wrap .cart .inner .bug span:nth-of-type(2) b:after, #slider3 #wrap .cart .inner .inner .bug span:nth-of-type(2) b:after {
+  content: "+";
+  position: absolute;
+  right: -20px;
+  color: #aaa;
+  font-weight: 300;
+  font-size: 26px;
+}
+#slider3 #wrap .cart .inner .bug span:nth-of-type(2) b:before, #slider3 #wrap .cart .inner .bug span:nth-of-type(2) b:after, #slider3 #wrap .cart .inner .inner .bug span:nth-of-type(2) b:before, #slider3 #wrap .cart .inner .inner .bug span:nth-of-type(2) b:after {
+  top: 50%;
+  transform: translateY(-50%);
+}
+#slider3 #wrap .cart .inner .bug span:nth-of-type(3), #slider3 #wrap .cart .inner .inner .bug span:nth-of-type(3) {
+  justify-content: center;
+}
+#slider3 #wrap .cart .inner .bug span:nth-of-type(3):after, #slider3 #wrap .cart .inner .inner .bug span:nth-of-type(3):after {
+  content: "8.00";
+}
+#slider3 #wrap .cart .inner .bug span:nth-of-type(4), #slider3 #wrap .cart .inner .inner .bug span:nth-of-type(4) {
+  justify-content: flex-end;
+}
+#slider3 #wrap .cartbtn {
+  position: absolute;
+  z-index: 2;
+  width: 50%;
+  left: calc(50% - 50px);
+  bottom: 0;
+  height: 45%;
+  pointer-events: none;
+}
+#slider3 #wrap .cartbtn:after {
+  content: "⟶";
+  position: absolute;
+  font-size: 20px;
+  right: 0px;
+  top: 20px;
+  opacity: 0;
+  color: rgba(255, 255, 255, 0.001);
+  transition: opacity 0.2s ease-in-out;
+}
+/* #slider3 #wrap .cartbtn:before {
+  content: "ADD TO CART";
+  position: absolute;
+  display: block;
+  width: 100px;
+  text-align: center;
+  left: 50%;
+  top: 50px;
+  color: #fff;
+  background: #000;
+  font-size: 12px;
+  font-weight: 900;
+  padding: 10px 15px;
+  border-radius: 50px;
+  transition: 0.2s ease-in-out;
+} */
+#slider3 #wrap input[type=checkbox] {
+  position: absolute;
+  z-index: 9;
+  opacity: 1;
+  width: 50%;
+  height: 50px;
+  bottom: 30%;
+  left: 50%;
+  opacity: 0;
+}
+#slider3 #wrap input[type=checkbox]:hover ~ .cartbtn:before {
+  background: #fff;
+  color: #000;
+}
+#slider3 #wrap input[type=checkbox]:checked {
+  pointer-events: all;
+  z-index: 9999;
+  bottom: 60%;
+  height: 40%;
+}
+#slider3 #wrap input[type=checkbox]:checked:hover ~ .cartbtn:after {
+  filter: brightness(0);
+}
+#slider3 #wrap input[type=checkbox]:checked ~ .cartbtn {
+  height: 100px;
+  z-index: 9999;
+  top: 0;
+  pointer-events: none;
+}
+#slider3 #wrap input[type=checkbox]:checked ~ .cartbtn:before {
+  display: none;
+}
+#slider3 #wrap input[type=checkbox]:checked ~ .cartbtn:after {
+  opacity: 1;
+  color: #ccc;
+  transition-delay: 1s;
+}
+#slider3 #wrap input[type=checkbox]:checked ~ .cart {
+  z-index: 99;
+}
+#slider3 #wrap input[type=checkbox]:checked ~ .cart .inner {
+  transform: translateX(0);
+  transition-delay: 1.25s;
+}
+#slider3 #wrap input[type=checkbox]:checked ~ .cart .inner .buy {
+  transition-delay: 1.75s;
+  transform: scale(1);
+}
+#slider3 #wrap input[type=checkbox]:checked ~ .cart .inner .bug {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+#slider3 #wrap input[type=checkbox]:checked ~ .cart .inner .bug:nth-of-type(1) {
+  transition: 0.7s ease-in-out;
+  transition-delay: 1.75s;
+}
+#slider3 #wrap input[type=checkbox]:checked ~ .cart .inner .bug:nth-of-type(2) {
+  transition: 0.7s ease-in-out;
+  transition-delay: 2s;
+}
+#slider3 #wrap input[type=checkbox]:checked ~ .cart .inner .bug:nth-of-type(3) {
+  transition: 0.7s ease-in-out;
+  transition-delay: 2.25s;
+}
+#slider3 #wrap input[type=checkbox]:checked ~ .cart .inner .bug:nth-of-type(4) {
+  transition: 0.7s ease-in-out;
+  transition-delay: 2.25s;
+}
+#slider3 #wrap input[type=checkbox]:checked ~ .slide .image {
+  width: 45%;
+  height: 45%;
+  transition-delay: 0.5s;
+}
+#slider3 #wrap input[type=checkbox]:checked ~ .jar:before, #slider3 #wrap input[type=checkbox]:checked ~ .jar:after {
+  transform: translateY(-20px) scaleX(0.75);
+  transition-delay: 0.5s;
+}
+#slider3 #wrap .outer {
+  z-index: -1;
+  position: absolute;
+  width: 25%;
+  height: 50%;
+}
+#slider3 #wrap .outer .box {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 400vh;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+#slider3 #wrap .outer .box:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: linear-gradient(to top, #f58286 25%, #1cc6ca 25%, #1cc6ca 50%, #eb4e4e 50%, #eb4e4e 75%, #f58286 75%);
+  transition: transform 600ms cubic-bezier(1, 0.885, 0.72, 1);
+}
+#slider3 #wrap:before, #slider3 #wrap:after {
+  content: "";
+  position: absolute;
+  width: 200vw;
+  height: 100vh;
+  background: linear-gradient(to right, #fef7ce 25%, #f76e3e 25%, #f76e3e 50%, #1cc6ca 50%, #1cc6ca 75%, #fef7ce 75%);
+  margin-top: calc(-50vh + 300px);
+  z-index: -2;
+  transition: transform 650ms cubic-bezier(1, 0.885, 0.72, 1);
+  left: 0;
+  top: 0;
+}
+#slider3 #wrap:before {
+  margin-left: calc(-50vw + 400px);
+}
+#slider3 #wrap:after {
+  background: linear-gradient(to bottom, #4a5bb2 25%, #f19d46 25%, #f19d46 50%, #64377f 50%, #64377f 75%, #4a5bb2 75%);
+  opacity: 1;
+  left: 50%;
+  height: 400vh;
+  width: 50vw;
+  z-index: -1;
+  transition: transform 700ms cubic-bezier(1, 0.885, 0.72, 1);
+  margin-top: calc(-250vh + 300px);
+}
+#slider3 #wrap .slide {
+  position: absolute;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  grid-template-columns: 25% 25% 50%;
+  grid-template-rows: 15% 85%;
+  z-index: 2;
+  overflow: hidden;
+}
+#slider3 #wrap .slide:nth-of-type(1):before {
+  background: #f58286;
+}
+#slider3 #wrap .slide:nth-of-type(1) .label:before {
+  background: #64377f;
+}
+#slider3 #wrap .slide:nth-of-type(1) .content h1:before {
+  content: "Trademark";
+}
+#slider3 #wrap .slide:nth-of-type(1) p.classifications span:first-of-type:after {
+  content: "Crafting identities, guarding legacies. Trust our trademark expertise to safeguard your brand's uniqueness, ensuring lasting recognition and market trust.";
+  opacity: 1;
+  position: relative;
+  height: 500px;
+  width: 250px;
+}
+
+
+#slider3 #wrap .slide:nth-of-type(2):before {
+  background: #1cc6ca;
+}
+#slider3 #wrap .slide:nth-of-type(2) .label:before {
+  background: #f19d46;
+}
+#slider3 #wrap .slide:nth-of-type(2) .content h1:before {
+  content: "Copyright";
+}
+#slider3 #wrap .slide:nth-of-type(2) p.classifications span:first-of-type:after {
+  content: "From creation to preservation, entrust us with your artistic vision. Our copyright protection shields your original works, ensuring they thrive without imitation or exploitation.";
+  opacity: 1;
+  position: relative;
+  height: 500px;
+  width: 250px;
+}
+
+#slider3 #wrap .slide:nth-of-type(3):before {
+  background: #ec575a;
+}
+#slider3 #wrap .slide:nth-of-type(3) .label:before {
+  background: #4a5bb2;
+}
+#slider3 #wrap .slide:nth-of-type(3) .content h1:before {
+  content: "Patent";
+}
+#slider3 #wrap .slide:nth-of-type(3) p.classifications span:first-of-type:after {
+  content: "Innovate fearlessly, secure your ideas diligently. Our patent expertise provides exclusive rights, safeguarding your inventions and fostering groundbreaking advancements.";
+  opacity: 1;
+  position: relative;
+  height: 500px;
+  width: 250px;
+}
+
+#slider3 #wrap .slide:nth-of-type(4):before {
+  background: #3cde9d;
+}
+#slider3 #wrap .slide:nth-of-type(4) .label:before {
+  background: #e73f5b;
+}
+#slider3 #wrap .slide:nth-of-type(4) .content h1:before {
+  content: "Geographical Indications(GI)";
+}
+#slider3 #wrap .slide:nth-of-type(4) p.classifications span:first-of-type:after {
+  content: "From soil to shelf, preserve the essence of origin. Our geographical indications protection ensures the authenticity and market prominence of your region-specific products.";
+  opacity: 1;
+  position: relative;
+  height: 500px;
+  width: 250px;
+}
+
+
+#slider3 #wrap .slide:before, #slider3 #wrap .slide .label:before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  background: #f58286;
+  z-index: -1;
+  transform: translateY(100%);
+  transform-origin: bottom;
+  transition: all 600ms cubic-bezier(1, 0.885, 0.72, 1);
+}
+#slider3 #wrap .slide .label {
+  grid-column: 1/span 1;
+  grid-row: 1/span 1;
+  position: relative;
+  overflow: hidden;
+}
+#slider3 #wrap .slide .label:after {
+  content: "SafeTrade";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 26px;
+  color: #fff;
+  font-weight: 700;
+}
+#slider3 #wrap .slide .label:before {
+  transition: all 650ms cubic-bezier(1, 0.885, 0.72, 1);
+  width: 100%;
+}
+#slider3 #wrap .slide .search {
+  grid-column: 2/span 1;
+  grid-row: 1/span 1;
+}
+#slider3 #wrap .slide .image {
+  position: absolute;
+  width: 47.5%;
+  height: 47.5%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-100vw);
+  will-change: transform;
+}
+#slider3 #wrap label {
+  color: #fff;
+  -webkit-text-stroke: 0.75px rgba(0, 0, 0, 0.25);
+  font-size: 50px;
+  font-weight: 900;
+  position: absolute;
+  margin: 0;
+  top: 275px;
+  width: 50%;
+  left: -125px;
+  transform: rotate(-90deg);
+}
+#slider3 #wrap .content {
+  position: absolute;
+  width: 50%;
+  height: auto;
+  right: 0%;
+  transform: translateY(calc(-50% - 25px));
+  top: 50%;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transition: -webkit-clip-path 0.6s ease-in-out;
+  transition: clip-path 0.6s ease-in-out;
+  transition: clip-path 0.6s ease-in-out, -webkit-clip-path 0.6s ease-in-out;
+  padding: 0 75px 100px 100px;
+}
+#slider3 #wrap .content p {
+  color: #fff;
+  float: right;
+  text-align: left;
+  opacity: 1;
+  width: 60%;
+  font-size: 14px;
+  line-height: 2;
+  position: relative;
+}
+#slider3 #wrap .content p:before {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 100px;
+  left: calc(-60% - 10px);
+  top: -20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: invert(1);
+  transform: translateY(50px);
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+}
+#slider3 #wrap .content p span:after {
+  display: inline-block;
+  clear: left;
+  margin-left: 5px;
+}
+#slider3 #wrap .content h1 {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  font-size: 40px;
+}
+#slider3 #wrap .content h1:before {
+  content: "";
+  display: block;
+  text-align: left;
+  max-width: 100%;
+  font-family: "Playfair Display";
+  color: #fff;
+}
+#slider3 #wrap p.classifications {
+  position: absolute;
+  left: 17.5%;
+  top: 25%;
+  -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+          clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  transition: -webkit-clip-path 0.3s ease-in-out;
+  transition: clip-path 0.3s ease-in-out;
+  transition: clip-path 0.3s ease-in-out, -webkit-clip-path 0.3s ease-in-out;
+}
+#slider3 #wrap p {
+  font-size: 16px;
+  margin: 0;
+  line-height: 1.6;
+  opacity: 0.35;
+}
+#slider3 #wrap p span {
+  display: block;
+  clear: both;
+  font-weight: 600;
+}
+#slider3 #wrap p span:after {
+  display: block;
+  clear: both;
+  font-weight: 300;
+  margin-bottom: 10px;
+}/*# sourceMappingURL=slider3.css.map */
+
+.samebox{
+  background-color: rebeccapurple;
+  opacity: 1;
+  position: relative;
+  height: 500px;
+  width: 300px;
+  
+}

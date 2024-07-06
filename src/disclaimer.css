@@ -1,0 +1,63 @@
+#disclaimer{
+
+    position: fixed;
+    z-index: 1000;
+    padding-left: 30%;
+    padding-right: 30%;
+
+    .content {
+        transition: filter 0.3s;
+    }
+    
+    .popup {
+        display: none; /* Hidden by default */
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+        backdrop-filter: blur(5px); /* Blurring the background */
+    }
+    
+    .popup-content {
+        background-color: #fff;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 650px;
+        text-align: center;
+        border-radius: 10px;
+    }
+    
+    .agree-button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    
+    .agree-button:hover {
+        background-color: #45a049;
+    }
+
+    .dont-agree-button {
+        background-color: #fa3e3e;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    
+    .dont-agree-button:hover {
+        background-color: #fe2424;
+    }
+}

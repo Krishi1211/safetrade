@@ -1,0 +1,28 @@
+// {
+//   "routes": [
+//     {
+//       "route": "/",
+//       "rewrite": "/src/index.html"
+//     },
+//     {
+//       "route": "/home",
+//       "rewrite": "/src/home.html"
+//     },
+//     {
+//       "route": "/home/*",
+//       "rewrite": "/src/home.html"
+//     },
+//     {
+//       "route": "/team",
+//       "rewrite": "/src/team.html"
+//     },
+//     {
+//       "route": "/team/*",
+//       "rewrite": "/src/team.html"
+//     },
+//     {
+//       "route": "/contact/*",
+//       "rewrite": "/src/contact.html"
+//     }
+//   ]
+// }

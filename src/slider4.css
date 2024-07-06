@@ -1,0 +1,66 @@
+.slider4{
+    *,
+    *:after,
+    *:before {
+        box-sizing: border-box;
+    }
+
+    
+      
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    font-family: 'Google Sans', sans-serif, system-ui;
+    
+
+    .track-wrapper {
+        width: 80%;
+        max-inline-size: 1200px; /* Example value */
+        overflow: hidden;
+        -webkit-mask: linear-gradient(90deg,
+                                    transparent 0,
+                                    black 15% 85%,
+                                    transparent
+                                ) 0 50% / 100% calc(100% - (2 * 16px)) no-repeat,
+                                linear-gradient(0deg, black, black) 50% 0 / 100% 16px no-repeat,
+                                linear-gradient(0deg, black, black) 50% 100% / 100% 16px no-repeat;
+    }
+
+    img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .track {
+        height: clamp(200px, 40vmin, 50rem);
+        width: 100%;
+        display: flex;
+        overflow: overlay;
+        gap: 16px; /* Example value */
+        list-style-type: none;
+        margin: 0;
+        /* background: hsla(0, 0%, 100%, 0.25); */
+        padding: 16px 33%;
+        scroll-snap-type: x mandatory;
+        -webkit-mask: radial-gradient(#0000 0 30%, #000 30.5%) 50% calc(clamp(200px, 40vmin, 50rem) * 0.5) / 300% 100%,
+                                    linear-gradient(0deg, black, black) 50% 0 / 100% 16px no-repeat,
+                                    linear-gradient(0deg, black, black) 50% 100% / 100% 16px no-repeat;
+    }
+
+    .track__item {
+        height: 100%;
+        aspect-ratio: 1;
+        background: hsl(0, 80%, 50%);
+        scroll-snap-align: center;
+    }
+
+    h1 {
+        position: fixed;
+        margin: 0;
+        opacity: 0.5;
+        bottom: 16px; /* Example value */
+        right: 16px; /* Example value */
+        font-size: 2rem; /* Example value */
+    }
+
+}
