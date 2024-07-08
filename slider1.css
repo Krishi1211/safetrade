@@ -10,7 +10,7 @@
 #slider1 {
   font-family: 'Playfair Display', serif;
   color: black;
-font-weight: 100;
+  font-weight: 100;
 }
 #slider1{
     a {
@@ -27,6 +27,7 @@ font-weight: 100;
         width: 60%;
         padding: 3rem 3rem 3rem 5rem;
         display: table;
+        margin-top: 30px;
     }
     .left > div {
         display: table-cell;
@@ -43,7 +44,8 @@ font-weight: 100;
       margin-bottom: 4rem;
     }
     h1 {
-        font-size: 8rem;
+        font-size: 4rem;
+        line-height: 1;
         margin-bottom: 3rem;
     }
     h1 + p {
@@ -115,6 +117,7 @@ font-weight: 100;
         text-align: center;
         z-index: 10;
     }
+
     nav a {
         display: inline-block;
         border-radius: 50%;
@@ -128,6 +131,11 @@ font-weight: 100;
     }
     a.current_dot {
         transform: scale(1.4);
+    }
+    @media screen and (max-width:500px){
+        .left{
+            padding: 3rem 0rem 3rem 3%;
+        }
     }
     @media screen and (max-width: 700px) {
         .left {

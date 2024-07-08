@@ -9,6 +9,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Agree button functionality
     document.getElementById('agree-button').addEventListener('click', function() {
         document.getElementById('disclaimer').style.display = 'none';
+        let elements = document.getElementsByClassName('rest');
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.opacity = '1';
+        }
         document.querySelector('.content').style.filter = 'none';
         // Set local storage to remember that disclaimer has been shown
         localStorage.setItem('disclaimerShown', 'true');

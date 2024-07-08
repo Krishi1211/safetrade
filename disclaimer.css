@@ -1,13 +1,24 @@
+.rest{
+    opacity: 0.5;
+}
+
 #disclaimer{
 
     position: fixed;
     z-index: 1000;
-    padding-left: 30%;
-    padding-right: 30%;
+    /* padding-left: 30%;
+    padding-right: 30%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    padding: 0 4%;
 
     .content {
         transition: filter 0.3s;
     }
+
     
     .popup {
         display: none; /* Hidden by default */
@@ -27,7 +38,7 @@
         margin: 15% auto;
         padding: 20px;
         border: 1px solid #888;
-        width: 80%;
+        /* width: 80%; */
         max-width: 650px;
         text-align: center;
         border-radius: 10px;

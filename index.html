@@ -12,8 +12,6 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="slider1.css">
   <link rel="stylesheet" href="slider2.css">
-  <link rel="stylesheet" href="slider3.css">
-  <link rel="stylesheet" href="slider4.css">
   <link rel="stylesheet" href="disclaimer.css">
   <link rel="icon" type="image/x-icon" href="../uploads-ssl.webflow.com/logo1.png">
   <meta content="summary_large_image" name="twitter:card" />
@@ -619,6 +617,7 @@ a, a:hover {
   opacity: 0;
   transition: all 0.3s;
   left: -30px;
+  display: none;
 }
 .news__item{
   margin-right: 4%;
@@ -632,7 +631,12 @@ a, a:hover {
   padding: 40px;
   color: #3b0000;
   border-radius: 10px;
-  display: block;
+  /* display: block; */
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80vh;
+    align-items: center;
   position: relative;
   overflow: hidden;
   transition: color 0.3s;
@@ -692,6 +696,7 @@ a, a:hover {
 @media screen and (max-width: 576px) {
   .news-slider {
     margin-top: 45px;
+    padding-bottom: 14%;
   }
 }
 .news-slider__wrp {
@@ -783,7 +788,12 @@ a, a:hover {
   padding: 40px;
   color: #3b0000;
   border-radius: 10px;
-  display: block;
+  /* display: block; */
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80vh;
+    align-items: center;
   transition: all 0.3s;
 }
 @media screen and (min-width: 800px) {
@@ -889,22 +899,23 @@ a, a:hover {
   border-radius: 10px;
   height: 100%;
   width: 100%;
+  box-shadow: 5px 5px 15px rgb(0 0 0 / 20%);
 }
   </style>
 </head>
 
 <body class="body">
-  <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease-in-out-cubic"
+  <div  data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease-in-out-cubic"
     data-easing2="ease-in-out-cubic" role="banner" class="navbar w-nav">
     <header class="header">
-      <a href="/home" class="logo">
+      <a href="/home" class="logo rest">
         <div class="logo-name footer-logo-name fancy-fon" style="color: rgb(59, 0, 0);">Safe Trade Approvals</div>
         <!-- <img src="logo.svg" loading="lazy" alt="" /> -->
         <div class="logo-name"></div>
       </a>
       <input class="menu-btn" type="checkbox" id="menu-btn" />
       <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-      <ul class="menu" style="padding-top: 1%;">
+      <ul class="menu rest" style="padding-top: 1%;">
         <li><a href="/home">HOME</a></li>
         <li><a href="/team">TEAM</a></li>
         <li><a href="/contact">CONTACT US</a></li>
@@ -989,35 +1000,39 @@ a, a:hover {
     </div> -->
 
     <!-- slider1 -->
-    <div id="slider1">
+    <div class="rest" id="slider1">
       <section class="intro">
         <div class="left">
           <div>
-            <span>Explore</span>
-            <h1>The Places Where You Will</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos eveniet amet excepturi voluptates dolorem totam ad quod hic, porro accusamus, repellat, corrupti at obcaecati ducimus, dolor quibusdam sequi nemo inventore?</p>
-            <a href="https://unsplash.com/" target="_blank">Images by Unsplash</a>
+            <h1>Protecting your Innovations with Expertise</h1>
+            <p style="font-size:1.2rem;">Going Safe with Safe Trade Approvals - Trusted for safeguarding IP assets with precision and strategic expertise. Clients rely on our commitment to meticulous protection, ensuring their innovations thrive securely in a competitive landscape.</p>
           </div>
         </div>
 
         <div class="slider">
           <ul>
-            <li style="background-image:url(https://images.unsplash.com/photo-1458640904116-093b74971de9?crop=entropy&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1375)">
+            <li style="background-image:url(/safetradeapprovals.com/src/images/WelcomeImage1.png); background-size: contain;">
               <div class="center-y">
-                <h3>Slider Title #1</h3>
-                <a href="#">View Project</a>	
+                <!-- <h3>Slider Title #1</h3>
+                <a href="#">View Project</a>	 -->
               </div>
             </li>
-            <li style="background-image:url(https://images.unsplash.com/photo-1451906278231-17b8ff0a8880?crop=entropy&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1375)">
+            <li style="background-image:url(/safetradeapprovals.com/src/images/WelcomeImage2.png); background-size: contain;">
               <div class="center-y">
-                <h3>Slider Title #2</h3>
-                <a href="#">View Project</a>	
+                <!-- <h3>Slider Title #2</h3>
+                <a href="#">View Project</a>	 -->
               </div>
             </li>
-            <li style="background-image:url(https://images.unsplash.com/photo-1456428199391-a3b1cb5e93ab?crop=entropy&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1375)">
+            <li style="background-image:url(/safetradeapprovals.com/src/images/WelcomeImage3.png); background-size: contain;">
               <div class="center-y">
-                <h3>Slider Title #3</h3>
-                <a href="#">View Project</a>	
+                <!-- <h3>Slider Title #3</h3>
+                <a href="#">View Project</a>	 -->
+              </div>
+            </li>
+            <li style="background-image:url(/safetradeapprovals.com/src/images/WelcomeImage4.png); background-size: contain;">
+              <div class="center-y">
+                <!-- <h3>Slider Title #3</h3>
+                <a href="#">View Project</a>	 -->
               </div>
             </li>
           </ul>
@@ -1027,93 +1042,21 @@ a, a:hover {
               <a href="#"></a>
               <a href="#"></a>
               <a href="#"></a>
+              <a href="#"></a>
             </nav>
           </ul>
         </div>
     </section>
   </div>
 
-  <!-- slider2 -->
-  <div id="slider2">
-    <section class="velo-slides" data-velo-slider="on" data-velo-theme="light">
-      <!-- Slide -->
-      <section class="velo-slide">
-        <!-- Pretitle Hint -->
-        <span class="velo-slider__hint"><span><span>Check Them Bldgs</span></span></span> <!-- Slide BG -->
-        <div class="velo-slide__bg">
-          <!-- Borders -->
-          <span class="border"><span></span></span> <!-- Img -->
-          <figure class="velo-slide__figure" style="background-image: url(https://source.unsplash.com/VsBl5PwVZpY/2000x1200)"></figure>
-        </div>
-      
-        <!-- Header -->
-        <header class="velo-slide__header">
-          <h3 class="velo-slide__title"><span class="oh"><span>The Name Is</span></span><span class="oh"><span>Stephen Scaff</span></span></h3>
-          <p class="velo-slide__text"><span class="oh"><span>I'm a Creative Developer currently building web things at the Seattle Branding + Interactive firm, Urban Influence.</span></span></p>
-          <span class="velo-slide__btn"><a class="btn-draw btn--white" href="#"><span class="btn-draw__text"><span>View Work</span></span></a></span>
-        </header>
-      </section>
-
-      <!-- Slide -->
-      <section class="velo-slide">
-        <!-- Pretitle Hint -->
-        <span class="velo-slider__hint"><span><span>What's up Playas</span></span></span> 
-        <!-- Slide BG -->
-        <div class="velo-slide__bg">
-          <!-- Borders -->
-          <span class="border"><span></span></span> <!-- Img -->
-          <figure class="velo-slide__figure" style="background-image: url(https://source.unsplash.com/D8GFCYxyJj8/2000x1200)"></figure>
-        </div>
-      
-        <!-- Header -->
-        <header class="velo-slide__header">
-          <h3 class="velo-slide__title"><span class="oh"><span>Another Day</span></span><span class="oh"><span>Another Slide</span></span></h3>
-          <p class="velo-slide__text"><span class="oh"><span>The here slider interaction thing is using Velocity for ehanced animation performance.</span></span></p>
-        </header>
-      </section>
-      
-      <!-- Slide - with Video -->
-      <section class="velo-slide">
-        <!-- Pretitle Hint -->
-        <span class="velo-slider__hint"><span><span>Urban Influence</span></span></span> 
-        <!-- Slide BG -->
-        <div class="velo-slide__bg">
-          <!-- Borders -->
-          <span class="border"><span></span></span> <!-- Img -->
-          <figure class="velo-slide__figure" style="background-image: url()"></figure>
-          <div class="velo-slide__vid-wrap">
-            <video autoplay="" class="velo-slide__vid" loop="" poster="">
-              <source src="http://uiclients.com/assets/videos/ui-chaun.mp4" type="video/mp4"> Wait, are you still using IE? Bruv. Go get Chrome, or kick rocks.</video>
-          </div>
-        </div><!-- Header -->
-        <header class="velo-slide__header">
-          <h3 class="velo-slide__title"><span class="oh"><span>Pigeon Wisdom</span></span><span class="oh"><span>Agency Site</span></span></h3>
-          <p class="velo-slide__text"><span class="oh"><span>Live from the Coop, SOTD rocking, folio and storytelling joint for the Pigeon Wizzy squad. Coo Coo Mfers.</span></span></p>
-          <span class="velo-slide__btn"><a class="btn-draw btn--white" href="#"><span class="btn-draw__text"><span>View Project</span></span></a></span>
-        </header>
-      </section>
-    </div>
-   
-    <!-- Slides Nav -->
-    <nav class="velo-slides-nav">
-      <ul class="velo-slides-nav__list">
-        <li>
-          <a class="js-velo-slides-prev velo-slides-nav__prev inactive" href="#0"><i class="icon-up-arrow"></i></a>
-        </li>
-        <li>
-          <a class="js-velo-slides-next velo-slides-nav__next" href="#0"><i class="icon-down-arrow"></i></a>
-        </li>
-      </ul>
-    </nav>
-  </section>
-
+  
     <div class="section margin-top-60px">
       <div class="container">
 
       </div>
     </div>
 
-    <div class="slideshow-container hegt" style="height: 740;padding: 4%; position: relative;">
+    <div class="slideshow-container hegt rest" style="height: 740;padding: 4%; position: relative;">
       <a class="prev" onclick="plusSlides(-1)" style="left: 0;">&#10094;</a>
       <a class="next" onclick="plusSlides(1)" style="right: 0;">&#10095;</a>
       <div class="mySlides fade">
@@ -1175,7 +1118,7 @@ a, a:hover {
       <span class="dot" onclick="currentSlide(4)"></span>
       <span class="dot" onclick="currentSlide(5)"></span>
     </div>
-    <br><br><br>
+    <br>
 
 
 
@@ -1373,75 +1316,34 @@ a, a:hover {
     </div> -->
 
 
-<div class="slider4">
-<h1>Horizontal Scroll</h1>
+<div  class="slider2 rest">
+
 <div class="track-wrapper">
   <ul class="track">
     <li class="track__item">
-      <img src="https://images.unsplash.com/photo-1523437237164-d442d57cc3c9?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218MHx8bGFuZHNjYXBlfHx8fHx8MTY1OTA1NDYzMw&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300" alt="" width="300" height="300" />
+      <img src="/safetradeapprovals.com/src/images/Membership 1.png" alt="" width="300" height="300" />
     </li>
     <li class="track__item">
-      <img src="https://images.unsplash.com/photo-1421930866250-aa0594cea05c?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218MHx8bGFuZHNjYXBlfHx8fHx8MTY1OTA1NDYzNQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300" alt="" width="300" height="300" />
+      <img src="/safetradeapprovals.com/src/images/Membership 2.png" alt="" width="300" height="300" />
     </li>
     <li class="track__item">
-      <img src="https://images.unsplash.com/photo-1536152470836-b943b246224c?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218MHx8bGFuZHNjYXBlfHx8fHx8MTY1OTA1NDYzNw&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300" alt="" width="300" height="300" />
+      <img src="/safetradeapprovals.com/src/images/Membership 3.png" alt="" width="300" height="300" />
     </li>
     <li class="track__item">
-      <img src="https://images.unsplash.com/photo-1491824989090-cc2d0b57eb0d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218MHx8bGFuZHNjYXBlfHx8fHx8MTY1OTA1NDYzOQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300" alt="" width="300" height="300" />
+      <img src="/safetradeapprovals.com/src/images/Membership 4.png" alt="" width="300" height="300" />
     </li>
     <li class="track__item">
-      <img src="https://images.unsplash.com/photo-1518717202715-9fa9d099f58a?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218MHx8bGFuZHNjYXBlfHx8fHx8MTY1OTA1NDY0MQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300" alt="" width="300" height="300" />
+      <img src="/safetradeapprovals.com/src/images/Membership 5.png" alt="" width="300" height="300" />
     </li>
     <li class="track__item">
-      <img src="https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218MHx8bGFuZHNjYXBlfHx8fHx8MTY1OTA1NDY0Mg&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300" alt="" width="300" height="300" />
+      <img src="/safetradeapprovals.com/src/images/Membership 6.png" alt="" width="300" height="300" />
     </li>
-    <li class="track__item">
-      <img src="https://images.unsplash.com/photo-1421930866250-aa0594cea05c?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218MHx8bGFuZHNjYXBlfHx8fHx8MTY1OTA1NDY0NA&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300" alt="" width="300" height="300" />
-    </li>
-    <li class="track__item">
-      <img src="https://images.unsplash.com/photo-1459213599465-03ab6a4d5931?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218MHx8bGFuZHNjYXBlfHx8fHx8MTY1OTA1NDY0NQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300" alt="" width="300" height="300" />
-    </li>
-    <li class="track__item">
-      <img src="https://images.unsplash.com/photo-1495107334309-fcf20504a5ab?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218MHx8bGFuZHNjYXBlfHx8fHx8MTY1OTA1NDY0Nw&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300" alt="" width="300" height="300" />
-    </li>
-    <li class="track__item">
-      <img src="https://images.unsplash.com/photo-1453791052107-5c843da62d97?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218MHx8bGFuZHNjYXBlfHx8fHx8MTY1OTA1NDY0OA&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300" alt="" width="300" height="300" />
-    </li>
-    <li class="track__item">
-      <img src="https://images.unsplash.com/photo-1471978445661-ad6ec1f5ba50?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218MHx8bGFuZHNjYXBlfHx8fHx8MTY1OTA1NDY1MQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300" alt="" width="300" height="300" />
-    </li>
-    <li class="track__item">
-      <img src="https://images.unsplash.com/photo-1523978591478-c753949ff840?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218MHx8bGFuZHNjYXBlfHx8fHx8MTY1OTA1NDY1Mg&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300" alt="" width="300" height="300" />
-    </li>
-    <li class="track__item">
-      <img src="https://images.unsplash.com/photo-1489549132488-d00b7eee80f1?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218MHx8bGFuZHNjYXBlfHx8fHx8MTY1OTA1NDY1NA&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300" alt="" width="300" height="300" />
-    </li>
-    <li class="track__item">
-      <img src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218MHx8bGFuZHNjYXBlfHx8fHx8MTY1OTA1NDY1NQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300" alt="" width="300" height="300" />
-    </li>
-    <li class="track__item">
-      <img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218MHx8bGFuZHNjYXBlfHx8fHx8MTY1OTA1NDY1Nw&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300" alt="" width="300" height="300" />
-    </li>
-    <li class="track__item">
-      <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218MHx8bGFuZHNjYXBlfHx8fHx8MTY1OTA1NDY1OA&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300" alt="" width="300" height="300" />
-    </li>
-    <li class="track__item">
-      <img src="https://images.unsplash.com/photo-1495312040802-a929cd14a6ab?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218MHx8bGFuZHNjYXBlfHx8fHx8MTY1OTA1NDY1OQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300" alt="" width="300" height="300" />
-    </li>
-    <li class="track__item">
-      <img src="https://images.unsplash.com/photo-1465147264724-326b45c3c59b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218MHx8bGFuZHNjYXBlfHx8fHx8MTY1OTA1NDY2MQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300" alt="" width="300" height="300" />
-    </li>
-    <li class="track__item">
-      <img src="https://images.unsplash.com/photo-1421930866250-aa0594cea05c?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218MHx8bGFuZHNjYXBlfHx8fHx8MTY1OTA1NDY2Mg&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300" alt="" width="300" height="300" />
-    </li>
-    <li class="track__item">
-      <img src="https://images.unsplash.com/photo-1584148721201-b6432e0d5106?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218MHx8bGFuZHNjYXBlfHx8fHx8MTY1OTA1NDY2Mw&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300" alt="" width="300" height="300">
-    </li>
+    
   </ul>
 </div>
       </div>
 
-      <div class="section testimonial-section" style="overflow: hidden;background-color:#D2B48C;">
+      <div class="section testimonial-section rest" style="overflow: hidden;background-color:#D2B48C;">
         <div class="container">
           <h1 class="heading-h1 testimonial-heading text-center margin-bottom-24px" style="color:  rgb(59, 0, 0);">
             Founders Note:
@@ -1511,168 +1413,9 @@ a, a:hover {
       <br>
       <br>
 
-      <!-- slider3 -->
-      <div id="slider3">
-        <input id="rad1" checked="checked" name="rad" type="radio">
-        <input id="rad2" name="rad" type="radio">
-        <input id="rad3" name="rad" type="radio">
+      
 
-        <div class="btn"></div>
-        <div id="wrap">
-          <input type="checkbox">
-          
-          <!-- Repeat this structure 3 times -->
-          <div class="slide">
-            <div class="label"></div>
-            <div class="search"></div>
-            <div class="image"></div>
-            <div class="content">
-              <h1></h1>
-              <p>
-                
-              </p>
-            </div>
-            <label for="classification"></label>
-            <p class="classifications">
-              <span></span>
-            </p>
-          </div>
-          <!-- End of repeated structure -->
-
-          <!-- Repeat this structure 3 times -->
-          <div class="slide">
-            <div class="label"></div>
-            <div class="search"></div>
-            <div class="image"></div>
-            <div class="content">
-              <h1></h1>
-              <p>
-                
-              </p>
-            </div>
-            <label for="classification"></label>
-            <p class="classifications">
-              <span></span>
-            </p>
-          </div>
-          <!-- End of repeated structure -->
-
-          <!-- Repeat this structure 3 times -->
-          <div class="slide">
-            <div class="label"></div>
-            <div class="search"></div>
-            <div class="image"></div>
-            <div class="content">
-              <h1></h1>
-              <p>
-                
-              </p>
-            </div>
-            <label for="classification"></label>
-            <p class="classifications">
-              <span></span>
-            </p>
-          </div>
-          <!-- End of repeated structure -->
-
-          <!-- Repeat this structure 3 times -->
-          <div class="slide">
-            <div class="label"></div>
-            <div class="search"></div>
-            <div class="image"></div>
-            <div class="content">
-              <h1></h1>
-              <p>
-                
-              </p>
-            </div>
-            <label for="classification"></label>
-            <p class="classifications">
-              <span></span>
-            </p>
-          </div>
-          <!-- End of repeated structure -->
-
-          
-
-          <div class="jar"></div>
-          <div class="outer"></div>
-          <div class="box"></div>
-          <div class="cartbtn"></div>
-          <div class="cart">
-            <div class="inner">
-              <!-- Repeat this structure 3 times -->
-              <div class="bug">
-                <div class="image"></div>
-                <span></span>
-                <span><b>1</b></span>
-                <span>$</span>
-                <span>X</span>
-              </div>
-              <!-- End of repeated structure -->
-            </div>
-            <div class="inner">
-              <!-- Repeat this structure 3 times -->
-              <div class="bug">
-                <div class="image"></div>
-                <span></span>
-                <span><b>1</b></span>
-                <span>$</span>
-                <span>X</span>
-              </div>
-              <!-- End of repeated structure -->
-            </div>
-            <div class="inner">
-              <!-- Repeat this structure 3 times -->
-              <div class="bug">
-                <div class="image"></div>
-                <span></span>
-                <span><b>1</b></span>
-                <span>$</span>
-                <span>X</span>
-              </div>
-              <!-- End of repeated structure -->
-            </div>
-            <div class="inner">
-              <!-- Repeat this structure 3 times -->
-              <div class="bug">
-                <div class="image"></div>
-                <span></span>
-                <span><b>1</b></span>
-                <span>$</span>
-                <span>X</span>
-              </div>
-              <!-- End of repeated structure -->
-            </div>
-
-            <div class="inner">
-              <!-- Repeat this structure 3 times -->
-              <div class="bug">
-                <div class="image"></div>
-                <span></span>
-                <span><b>1</b></span>
-                <span>$</span>
-                <span>X</span>
-              </div>
-              <!-- End of repeated structure -->
-            </div>
-            
-            
-            <div class="buy"></div>
-          </div>
-        </div>
-
-        <!-- Repeat this structure 3 times -->
-        <div class="panels"></div>
-        <div class="panels"></div>
-        <div class="panels"></div>
-        <div class="panels"></div>
-        <!-- End of repeated structure -->
-
-      </div>
-
-
-      <div class="wrapper">
+      <div class="wrapper rest">
 
         <div class="background">
           <!-- <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537132206/news-slider/background.jpg" alt=""> -->
@@ -1687,20 +1430,21 @@ a, a:hover {
                   <span class="news-date__title">24</span>
                   <span class="news-date__txt">May</span>
                 </div> -->
-                <div class="icon-holder expertise-icon-holder">
+                <!-- <div class="icon-holder expertise-icon-holder">
                   <i class="fa-solid fa-trademark" style="font-size: 30px;"></i>
-                </div>
+                </div> -->
                 <div class="news__title">
-                  Trademark
+                  1. Patent Protection and Enforcement
+
                 </div>
       
                 <p class="news__txt">
-                  Crafting identities, guarding legacies. Trust our trademark expertise to safeguard your brand's uniqueness, ensuring lasting recognition and market trust.
+                  We assist in securing patents, providing clients with exclusive rights to their inventions, ensuring protection against unauthorized use.
                 </p>
       
-                <!-- <div class="news__img">
-                  <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537132205/news-slider/item-2.jpg" alt="news">
-                </div> -->
+                <div class="news__img">
+                  <img src="/safetradeapprovals.com/src/images/Patent LOGO.jpg" alt="news">
+                </div>
               </a>
             </div>
       
@@ -1710,20 +1454,20 @@ a, a:hover {
                   <span class="news-date__title">25</span>
                   <span class="news-date__txt">May</span>
                 </div> -->
-                <div class="icon-holder expertise-icon-holder">
+                <!-- <div class="icon-holder expertise-icon-holder">
                   <i class="fa-solid fa-copyright" style="font-size: 30px;"></i>
-                </div>
+                </div> -->
                 <div class="news__title">
-                  Copyright
+                  2. Patent Licensing Strategic Patent Licensing Agreements
                 </div>
       
                 <p class="news__txt">
-                  From creation to preservation, entrust us with your artistic vision. Our copyright protection shields your original works, ensuring they thrive without imitation or exploitation.
+                  Our expertise in patent licensing enables clients to monetize their inventions by granting usage rights while retaining ownership.
                 </p>
       
-                <!-- <div class="news__img">
-                  <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537132205/news-slider/item-3.jpg" alt="news">
-                </div> -->
+                <div class="news__img">
+                  <img src="/safetradeapprovals.com/src/images/Patent Licensing LOGO.jpg" alt="news">
+                </div>
               </a>
             </div>
             <div class="news-slider__item swiper-slide">
@@ -1732,20 +1476,20 @@ a, a:hover {
                   <span class="news-date__title">25</span>
                   <span class="news-date__txt">May</span>
                 </div> -->
-                <div class="icon-holder expertise-icon-holder">
+                <!-- <div class="icon-holder expertise-icon-holder">
                   <i class="fa-solid fa-address-card" style="font-size: 30px;"></i>
-                </div>
+                </div> -->
                 <div class="news__title">
-                  Patent
+                  3. Trademark Trademark Registration and Defense
                 </div>
       
                 <p class="news__txt">
-                  Innovate fearlessly, secure your ideas diligently. Our patent expertise provides exclusive rights, safeguarding your inventions and fostering groundbreaking advancements.
+                  We specialize in trademark registration and protection, safeguarding your brand's identity and ensuring legal exclusivity.
                 </p>
       
-                <!-- <div class="news__img">
-                  <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537132205/news-slider/item-3.jpg" alt="news">
-                </div> -->
+                <div class="news__img">
+                  <img src="/safetradeapprovals.com/src/images/Trademark LOGO.jpg" alt="news">
+                </div>
               </a>
             </div>
             <div class="news-slider__item swiper-slide">
@@ -1754,20 +1498,20 @@ a, a:hover {
                   <span class="news-date__title">25</span>
                   <span class="news-date__txt">May</span>
                 </div> -->
-                <div class="icon-holder expertise-icon-holder">
+                <!-- <div class="icon-holder expertise-icon-holder">
                   <i class="fa-solid fa-map" style="font-size: 30px;"></i>
-                </div>
+                </div> -->
                 <div class="news__title">
-                  Geographical Indications(GI)
+                  4. Copyright Comprehensive Copyright Safeguarding
                 </div>
       
                 <p class="news__txt">
-                  From soil to shelf, preserve the essence of origin. Our geographical indications protection ensures the authenticity and market prominence of your region-specific products.
+                  Our services in copyright law protect original works, ensuring creators maintain control over the use and distribution of their creations.
                 </p>
       
-                <!-- <div class="news__img">
-                  <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537132205/news-slider/item-3.jpg" alt="news">
-                </div> -->
+                <div class="news__img">
+                  <img src="/safetradeapprovals.com/src/images/Copyright LOGO.jpg" alt="news">
+                </div>
               </a>
             </div>
             <div class="news-slider__item swiper-slide">
@@ -1776,20 +1520,20 @@ a, a:hover {
                   <span class="news-date__title">25</span>
                   <span class="news-date__txt">May</span>
                 </div> -->
-                <div class="icon-holder expertise-icon-holder">
+                <!-- <div class="icon-holder expertise-icon-holder">
                   <i class="fa-solid fa-pen-nib" style="font-size: 30px;"></i>
-                </div>
+                </div> -->
                 <div class="news__title">
-                  Designs
+                  5. Technology Transfer Legal Facilitation of Technology Transfer
                 </div>
       
                 <p class="news__txt">
-                  Innovation meets protection. Elevate your creations with our design safeguarding services, shielding your unique aesthetics and functional designs from replication and infringement.
+                  We facilitate technology transfer, helping clients commercialize innovations through strategic partnerships and licensing agreements.
                 </p>
       
-                <!-- <div class="news__img">
-                  <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537132205/news-slider/item-3.jpg" alt="news">
-                </div> -->
+                <div class="news__img">
+                  <img src="/safetradeapprovals.com/src/images/Technology Transfer LOGO.jpg" alt="news">
+                </div>
               </a>
             </div>
             <div class="news-slider__item swiper-slide">
@@ -1798,20 +1542,20 @@ a, a:hover {
                   <span class="news-date__title">25</span>
                   <span class="news-date__txt">May</span>
                 </div> -->
-                <div class="icon-holder expertise-icon-holder">
+                <!-- <div class="icon-holder expertise-icon-holder">
                   <i class="fa-solid fa-globe" style="font-size: 30px;"></i>
-                </div>
+                </div> -->
                 <div class="news__title">
-                  IP Litigation
+                  6. Patent Litigation Expert Patent Litigation Services
                 </div>
       
                 <p class="news__txt">
-                  In the arena of ideas, we fight for your rights. Trust our skilled IP litigation team to navigate complexities, defending your intellectual property with resolve and expertise.
+                  Our patent litigation services defend clients' patent rights, providing robust representation in infringement disputes and legal challenges.
                 </p>
       
-                <!-- <div class="news__img">
-                  <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537132205/news-slider/item-3.jpg" alt="news">
-                </div> -->
+                <div class="news__img">
+                  <img src="/safetradeapprovals.com/src/images/Patent Litigation LOGO.jpg" alt="news">
+                </div>
               </a>
             </div>
             <div class="news-slider__item swiper-slide">
@@ -1820,20 +1564,20 @@ a, a:hover {
                   <span class="news-date__title">25</span>
                   <span class="news-date__txt">May</span>
                 </div> -->
-                <div class="icon-holder expertise-icon-holder">
+                <!-- <div class="icon-holder expertise-icon-holder">
                   <i class="fas fa-gavel" style="font-size: 30px;"></i>
-                </div>
+                </div> -->
                 <div class="news__title">
-                  Patent Litigation
+                  7. Semiconductor Integrated Circuits Layout Designs Legal Safeguarding of Semiconductor Layout Designs
                 </div>
       
                 <p class="news__txt">
-                  Innovation is your battleground; victory, our pursuit. Our seasoned patent litigation services protect your inventions, ensuring market dominance and legal triumph.
+                  We offer specialized protection for semiconductor integrated circuit designs, ensuring clients' intricate layouts are legally secured.
                 </p>
       
-                <!-- <div class="news__img">
-                  <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537132205/news-slider/item-3.jpg" alt="news">
-                </div> -->
+                <div class="news__img">
+                  <img src="/safetradeapprovals.com/src/images/Semiconductor Integrated Circuits Layout Designs LOGO.jpg" alt="news">
+                </div>
               </a>
             </div>
             <div class="news-slider__item swiper-slide">
@@ -1842,20 +1586,20 @@ a, a:hover {
                   <span class="news-date__title">25</span>
                   <span class="news-date__txt">May</span>
                 </div> -->
-                <div class="icon-holder expertise-icon-holder">
+                <!-- <div class="icon-holder expertise-icon-holder">
                   <i class="fas fa-leaf" style="font-size: 30px;"></i>
-                </div>
+                </div> -->
                 <div class="news__title">
-                  Plant Variety and Bio Diversity
+                  8. IP Litigation Comprehensive IP Litigation Representation
                 </div>
       
                 <p class="news__txt">
-                  Nurturing nature, cultivating innovation. Our plant variety protection fosters biodiversity conservation, safeguarding agricultural diversity for sustainable futures.
+                  Our IP litigation expertise ensures comprehensive legal support in disputes over intellectual property rights, protecting clients' valuable assets.
                 </p>
       
-                <!-- <div class="news__img">
-                  <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537132205/news-slider/item-3.jpg" alt="news">
-                </div> -->
+                <div class="news__img">
+                  <img src="/safetradeapprovals.com/src/images/IP Litigation LOGO.jpg" alt="news">
+                </div>
               </a>
             </div>
             <div class="news-slider__item swiper-slide">
@@ -1864,20 +1608,85 @@ a, a:hover {
                   <span class="news-date__title">25</span>
                   <span class="news-date__txt">May</span>
                 </div> -->
-                <div class="icon-holder expertise-icon-holder">
+                <!-- <div class="icon-holder expertise-icon-holder">
                   <i class="fas fa-bullhorn" style="font-size: 30px;"></i>
-                </div>
+                </div> -->
                 <div class="news__title">
-                  Branding and Brand Endorsement
+                  9. Designs Industrial Design Legal Protection
                 </div>
       
                 <p class="news__txt">
-                  Trademark and copyright protection combined with expert branding and brand endorsement ensures your intellectual property is secure and your brand stands out, empowering business success.
+                  We assist in registering and protecting design patents, ensuring the unique aesthetic aspects of products are legally safeguarded.
                 </p>
       
-                <!-- <div class="news__img">
-                  <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537132205/news-slider/item-3.jpg" alt="news">
+                <div class="news__img">
+                  <img src="/safetradeapprovals.com/src/images/Designs LOGO.jpg" alt="news">
+                </div>
+              </a>
+            </div>
+            <div class="news-slider__item swiper-slide">
+              <a href="#" class="news__item">
+                <!-- <div class="news-date">
+                  <span class="news-date__title">25</span>
+                  <span class="news-date__txt">May</span>
                 </div> -->
+                <!-- <div class="icon-holder expertise-icon-holder">
+                  <i class="fas fa-bullhorn" style="font-size: 30px;"></i>
+                </div> -->
+                <div class="news__title">
+                  10. Plant Variety and Biodiversity Plant Variety and Biodiversity Law
+                </div>
+      
+                <p class="news__txt">
+                  Our services in plant variety and biodiversity law protect agricultural innovations and contribute to the conservation of biological diversity.
+                </p>
+      
+                <div class="news__img">
+                  <img src="/safetradeapprovals.com/src/images/Plant Variety and Bio Diversity LOGO.jpg" alt="news">
+                </div>
+              </a>
+            </div>
+            <div class="news-slider__item swiper-slide">
+              <a href="#" class="news__item">
+                <!-- <div class="news-date">
+                  <span class="news-date__title">25</span>
+                  <span class="news-date__txt">May</span>
+                </div> -->
+                <!-- <div class="icon-holder expertise-icon-holder">
+                  <i class="fas fa-bullhorn" style="font-size: 30px;"></i>
+                </div> -->
+                <div class="news__title">
+                  11. Geographical Indication Geographical Indication Certification
+                </div>
+      
+                <p class="news__txt">
+                  We help secure geographical indications, ensuring products' origins are protected and enhancing their market value and authenticity.
+                </p>
+      
+                <div class="news__img">
+                  <img src="/safetradeapprovals.com/src/images/Geographical Indications LOGO.jpg" alt="news">
+                </div>
+              </a>
+            </div>
+            <div class="news-slider__item swiper-slide">
+              <a href="#" class="news__item">
+                <!-- <div class="news-date">
+                  <span class="news-date__title">25</span>
+                  <span class="news-date__txt">May</span>
+                </div> -->
+                <!-- <div class="icon-holder expertise-icon-holder">
+                  <i class="fas fa-bullhorn" style="font-size: 30px;"></i>
+                </div> -->
+                <div class="news__title">
+                  12. Brand Strategies & Endorsement Legal Branding Strategies and Endorsements
+                </div>
+      
+                <p class="news__txt">
+                  We develop robust brand strategies and endorsement deals, enhancing brand visibility and credibility in competitive markets.                </p>
+      
+                  <div class="news__img">
+                    <img src="/safetradeapprovals.com/src/images/Brand Strategies & Endorsements LOGO.jpg" alt="news">
+                  </div>
               </a>
             </div>
 
@@ -1919,8 +1728,9 @@ a, a:hover {
         </defs>
       </svg>  
 
+        <br><br>
 
-      <div class="section" style="width: 100%;">
+      <!-- <div class="section" style="width: 100%;">
         <div class="container">
           <h1 class="heading-h1 margin-bottom-24px">Our Expertise</h1>
           <div class="w-layout-grid expertise-grid">
@@ -2034,9 +1844,9 @@ a, a:hover {
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
-      <div class="section team-background" style="background-color: #D2B48C; ">
+      <div class="section team-background rest" style="background-color: #D2B48C; ">
         <div class="container horizontal-container">
           <div id="w-node-_7656c004-16ea-8e63-a366-9f2a465f2074-b7d6da01" class="know-team-block">
             <h1 class="heading-h1 margin-bottom-24px" style="color:  rgb(59, 0, 0);">
@@ -2330,7 +2140,7 @@ a, a:hover {
       </div>
     </div> -->
       <br><br>
-      <div class="section footer-section less" style="background-color: #D2B48C; padding-top: 100px;padding-left: 6%;">
+      <div class="section footer-section less rest" style="background-color: #D2B48C; padding-top: 100px;padding-left: 6%; ">
         <img src="https://i.ibb.co/TBRQtwt/logo2.png" loading="lazy" alt="" width="200px" height="200px"
           class="logo-container mr" style="color: rgb(59, 0, 0);margin-left: 7%;" />
         <div class="container" style="padding-left: 0%;padding-right: 0%;">
@@ -2666,7 +2476,6 @@ swiper.on('slideChangeTransitionEnd', function () {
   <script src="https://kit.fontawesome.com/0f16206670.js" crossorigin="anonymous"></script>
   <script src="disclaimer.js"></script>
   <script src="slider1.js"></script>
-  <script src="slider2.js"></script>
 </body>
 <!-- Mirrored from src/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 27 Oct 2023 16:15:39 GMT -->
 
